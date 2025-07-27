@@ -1,0 +1,1045 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>NIKITA-QA-TESTER</title>
+<meta content="" name="description"/>
+<meta content="" name="keywords"/>
+<!-- Favicons -->
+<link href="assets/img/favicon.png" rel="icon"/>
+<link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon"/>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet"/>
+<!-- Vendor CSS Files -->
+<link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet"/>
+<link href="assets/vendor/aos/aos.css" rel="stylesheet"/>
+<link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet"/>
+<link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet"/>
+<!-- Main CSS File -->
+<link href="assets/css/main.css" rel="stylesheet"/>
+<!-- =======================================================
+  * Template Name: DevFolio
+  * Template URL: https://bootstrapmade.com/devfolio-bootstrap-portfolio-html-template/
+  * Updated: Aug 07 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+<style>
+.about-card {
+  background: #fff;
+  border: 1px solid #e1e1e1;
+  border-radius: 10px;
+  padding: 25px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, .08);
+  margin-bottom: 20px;
+}
+
+/* === Background gradient only below the hero === */
+.page-bg {
+  background: linear-gradient(180deg, #006eff 0%, #17ffe1 100%);
+  background-size: 100% 600px;
+  background-repeat: no-repeat;
+  height: 200px;
+  display: block;
+  width: 100%;
+}
+
+.wave-sep {
+  display: block;
+  width: 100%;
+  height: 80px;
+}
+
+/* — Skills – bullets + bars — */
+.skill-bars .progress {
+  height: 6px;
+  background: #e9ecef;
+  border-radius: 4px;
+}
+
+.skill-bars .progress-bar {
+  border-radius: 4px;
+}
+
+.skill-row {
+  margin-bottom: 12px;
+}
+
+.skill-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: .9rem;
+  margin-bottom: 3px;
+}
+
+.skill-label span:first-child {
+  font-weight: 600;
+}
+
+@media(max-width: 576px) {
+  .skill-label {
+    font-size: .8rem;
+  }
+}
+
+.btn-view {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(45deg, #006eff, #17ffe1);
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  padding: 0.6rem 1.5rem;
+  font-weight: 500;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s, background 0.3s;
+  text-decoration: none;
+}
+
+.btn-view i {
+  font-size: 1.1rem;
+}
+
+.btn-view:hover {
+  transform: scale(1.05);
+  background: linear-gradient(45deg, #17ffe1, #006eff);
+}
+
+.info-item > div {
+  min-width: 0;
+}
+
+.info-item p {
+  overflow-wrap: anywhere;
+}
+
+.section-title h2::after {
+  background: #0a1c2e !important;
+}
+
+:root {
+  --main-underline: #0a1c2e;
+}
+
+.section-title h2::after {
+  background: var(--main-underline) !important;
+}
+
+.portfolio .card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.portfolio .card-img-top {
+  height: 250px;
+  object-fit: cover;
+}
+
+.portfolio .card-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.portfolio .card-body .btn-view {
+  margin-top: auto;
+}
+
+.btn-download {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  color: #006eff;
+  border: 2px solid #006eff;
+  border-radius: 50px;
+  padding: 0.6rem 1.5rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+  margin-left: 0.5rem;
+}
+
+.btn-download i {
+  font-size: 1.1rem;
+}
+
+.btn-download:hover {
+  background: #006eff;
+  color: #fff;
+}
+
+.resume-container {
+            text-align: center;
+        }
+       
+        
+        .resume-container video {
+  display: block;
+  margin: 0 auto 20px;   /* 0 למעלה, auto משמאל/ימין, 20px למטה */
+  max-width: 60%;        /* השארת המגבלה שלך */
+  height: auto;
+}
+/* בתוך main.css שלך, בתחתית */
+#about .about-me h5 {
+  font-size: 1.5rem;    /* בערך 24px */
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+#about .about-me p,
+#about .skill-mf ul li {
+  font-size: 1rem;      /* 16px */
+  line-height: 1.6;
+}
+#about p {
+    line-height: 1.8; /* מגדיל את המרווח בין השורות */
+}
+
+#about h2, #about h3, #about p, #about li {
+    font-family: 'Poppins', sans-serif; /* מבטיח שימוש בגופן קריא וברור */
+}
+#resume {
+    line-height: 1.8 !important;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#resume h2, #resume h3, #resume h4, #resume h5 {
+    margin-top: 20px !important;
+    margin-bottom: 15px !important;
+}
+
+#resume p, #resume li {
+    font-size: 1rem !important; 
+    line-height: 1.8 !important;
+}
+
+#resume .resume-title {
+    font-size: 1.5rem !important; 
+    margin-bottom: 20px !important;
+}
+#resume, #resume * {
+    overflow: visible !important;
+}
+p, li {
+  font-size: 17px;
+  line-height: 1.6;
+}
+/* ✅ מניעת גלילה לרוחב במובייל */
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* ✅ תמיכה בפונט גדול וברור יותר במובייל */
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+}
+
+
+
+
+
+
+
+        
+</style>
+
+</head>
+<body class="index-page">
+<header class="header d-flex align-items-center sticky-top" id="header">
+<div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+<a class="logo d-flex align-items-center" href="index.html">
+<!-- Uncomment the line below if you also wish to use an image logo -->
+<!-- <img src="assets/img/logo.png" alt=""> -->
+<h1 class="sitename">NIKITA-QA-TESTER</h1>
+</a>
+<nav class="navmenu" id="navmenu">
+  <ul>
+    <!-- קישורי הבסיס -->
+    <li><a class="active" href="#hero">Home</a></li>
+    <!-- ▼ About -->
+<li class="dropdown">
+  <a href="#">
+    <span>About</span>
+    <i class="bi bi-chevron-down toggle-dropdown"></i>
+  </a>
+  <ul>
+    <li><a href="#about">About Me</a></li>
+    <li><a href="#resume">Resume</a></li>
+  </ul>
+</li>
+
+
+    <!-- ▼ Download CV -->
+    <li class="dropdown">
+      <a href="#">
+        
+        <span>Download CV</span>
+        <i class="bi bi-chevron-down toggle-dropdown"></i>
+      </a>
+      <ul>
+        <li><a href="assets/files/Nikita_Goiko_English_CV.pdf" download>English_CV</a></li>
+        <li><a href="assets/files/Nikita_Goiko_Hebrew_CV.pdf"  download>Hebrew_CV</a></li>
+      </ul>
+    </li>
+
+    <!-- ▼ View CV -->
+    <li class="dropdown">
+      <a href="#">
+        <span>View CV</span>
+        <i class="bi bi-chevron-down toggle-dropdown"></i>
+      </a>
+      <ul>
+        <li><a href="assets/files/Nikita_Goiko_English_CV.pdf" target="_blank">English_CV</a></li>
+        <li><a href="assets/files/Nikita_Goiko_Hebrew_CV.pdf"  target="_blank">Hebrew_CV</a></li>
+      </ul>
+    </li>
+
+    <!-- דרופ-דאון הפרויקטים (בלי שינוי) -->
+    <li class="dropdown">
+      <a href="#"><span>My Projects</span>
+        <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+      <ul>
+        <li><a href="#projects-docs">Projects Docs</a></li>
+        <li><a href="#presentations">Presentations</a></li>
+      </ul>
+    </li>
+
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+
+  <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+</nav>
+
+
+
+</div>
+</header>
+<main class="main">
+
+<section class="hero section dark-background" id="hero">
+<img alt="" data-aos="fade-in" src="assets/img/hero-img.jpg"/>
+<div class="container d-flex flex-column align-items-center justify-content-center text-center" data-aos="fade-up" data-aos-delay="100">
+<h2>I am Nikita Goiko</h2>
+<p><span class="typed" data-typed-items="QA Tester, Software Tester, Bug Hunter, Designer,JIRA Specialist,Always Learning"></span></p>
+</div>
+</section><!-- /Hero Section -->
+<svg class="wave-sep" viewBox="0 0 1440 80" preserveAspectRatio="none">
+  <path d="M0,0 C480,80 960,0 1440,80 L1440,80 L0,80 Z"
+        fill="#006eff"></path>
+</svg>
+<div class="page-bg"></div>
+<!-- About Section -->
+<section id="about" class="about-mf sect-pt4 route">
+  <div class="container">
+    <div class="row align-items-stretch">
+      
+      <!-- 1. עמודת תמונה משמאל, ללא wrappers מיותרים -->
+      <div class="col-12 col-md-6 p-0 d-flex">
+        <img
+         
+  src="assets/files/projects.docs/presentations/just.me.nikita.png"
+  alt="About Me Image"
+    style="
+    display: block;
+    width: 100%;
+    max-width: 900px;    /* הגבלה מקסימלית של רוחב */
+    height: auto;
+    object-fit: cover;
+  "
+
+        >
+      </div>
+      
+      <!-- עמודת הטקסט בצד ימין -->
+      <div class="col-12 col-md-6 d-flex flex-column justify-content-center ps-md-4">
+        <h2>About Me</h2>
+        <p>
+          I’m a junior QA with a sharp eye for detail and a genuine love of problem‑solving.
+          My core strengths lie in manual and API testing across web and mobile: I plan
+          and execute test suites, create clear STP / STD / STR documentation, and track
+          issues in Jira, monday and TestRail.
+        </p>
+        <p>
+          I’m also building solid automation skills—writing starter scripts in Selenium‑WebDriver
+          (Java / Python) and crafting REST collections in Postman. Curiosity drives me,
+          quality inspires me, and I’m excited to bring that mindset to every product I test,
+
+          and in my free time I enjoy learning about AI image‑design tools like Stable Diffusion, RunwayML, and more.
+        </p>
+        <h3 class="mt-4">Skills</h3>
+        <ul>
+          <li>Manual & API Testing (Web & Mobile)</li>
+          <li>Jira · TestRail · monday</li>
+          <li>Selenium‑WebDriver · Postman</li>
+          <li>Java · Python · HTML/CSS · SQL</li>
+          <li>STP / STD / STR Documentation</li>
+          <li>Agile Methodology</li>
+        </ul>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+
+<!-- /About Section -->
+
+<!-- Resume Section -->
+<!-- ======= Resume Section ======= -->
+<section id="resume" class="resume section">
+  
+    <div class="resume-container">
+    <h2>Resume</h2>
+    <p><strong>A snapshot of my education, certifications and core QA skill-set.</strong></p>
+
+    <div class="row justify-content-center mb-4">
+  <div class="col-auto text-center">
+        <video
+          class="img-fluid rounded shadow"
+          src="assets/img/QA.personal.video.mp4"
+          autoplay muted loop playsinline
+          style="max-width:40%; height:auto;"
+        >
+          הדפדפן שלך לא תומך ב־video.
+        </video>
+      </div>
+    <!-- … continue with the rest of the Resume content … -->
+  </div>
+</section>
+
+
+
+
+
+  
+   <div class="container" data-aos="fade-up" data-aos-delay="100">
+     <!-- === Summary ועוד שאר התוכן === -->
+    </div>
+</section>
+
+  <div class="container">
+
+    <!-- === Summary === -->
+    <div class="row">
+      <div class="col-12 col-lg-12" data-aos="fade-up" data-aos-delay="100">
+        <h3 class="resume-title">Summary</h3>
+        <div class="resume-item pb-0">
+          <p>
+            Junior QA Tester with hands-on experience in manual &amp; API testing, 
+            starter-level automation (Selenium + Postman) and strong documentation skills 
+            (STP&nbsp;/ STD&nbsp;/ STR). A curious detail-oriented team player
+            who enjoys learning new tools and ensuring end-to-end quality.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- === Education & Certification === -->
+    <div class="row">
+      <div class="col-12 col-lg-12" data-aos="fade-up" data-aos-delay="200">
+        <h3 class="resume-title">Education&nbsp;&amp;&nbsp;Certification</h3>
+
+        <!-- QA Diploma -->
+        <div class="resume-item">
+          <h4>QA Manual & automation Diploma</h4>
+          <h5>2024&nbsp;–&nbsp;2025</h5>
+          <p><em>eCom School,Tel-Aviv</em></p>
+          <ul>
+            <li>Completed 300-hour program covering manual, API and basic automation testing.</li>
+            <li>Three end-to-end QA projects graded with distinction (all showcased on this site).</li>
+          </ul>
+          <!-- Button to view certificate -->
+          <a class="btn btn-sm btn-primary" 
+             href="assets/files/Nikita_Goiko_QA_Certificate_Ecome_School_2025.pdf" 
+             target="_blank">
+            View Certificate&nbsp;<i class="bi bi-box-arrow-up-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- === Core QA Skills === -->
+    <div class="row">
+      <div class="col-12 col-lg-12" data-aos="fade-up" data-aos-delay="300">
+        <h3 class="resume-title">Core&nbsp;QA&nbsp;Skills</h3>
+        <ul>
+          <li>Manual &amp; API testing (web&nbsp;+&nbsp;mobile) – Jira&nbsp;/ TestRail, monday </li>
+          <li>STP&nbsp;/ STD&nbsp;/ STR creation &ndash; clear, reproducible bug reports</li>
+          <li>Selenium-WebDriver (Java&nbsp;/ Python) – starter automation scripts</li>
+          <li>Postman – REST collections &amp; basic automated assertions</li>
+          <li>SQL for data validation • HTML/CSS basics for UI inspections</li>
+          <li>Agile fundamentals – sprints, estimations, retrospectives</li>
+        </ul>
+      </div>
+    </div>
+
+  </div><!-- /container -->
+</section><!-- /Resume Section -->
+
+<!-- Services Section -->
+<section class="projects-docs section" id="projects-docs">
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Projects Docs</h2>
+    <p><strong>Detailed STP / STD / STR documentation / TC</strong></p>
+  </div>
+
+  <div class="container">
+    <div class="row g-4" data-aos="fade-up" data-aos-delay="200">
+      
+
+      
+
+      <!-- STP Warehouse Project (PDF) -->
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card h-100 shadow-sm border-primary">
+          <div class="card-body text-center">
+            <h6 class="card-title mb-2">STP Warehouse Project</h6>
+            <p class="small text-muted mb-3">PDF • 575 KB</p>
+            <a
+  href="assets/files/projects.docs/STP.Warehouse.Project.pdf"
+  target="_blank"
+  class="btn-view mb-3">
+  <i class="bi bi-eye-fill me-1"></i> VIEW
+</a>
+
+            <a
+  href="assets/files/projects.docs/STP.Warehouse.Project.pdf"
+  download
+  class="btn-download mt-2">
+  <i class="bi bi-download me-1"></i> DOWNLOAD
+</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- STR XOOX Website Project (PDF) -->
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card h-100 shadow-sm border-primary">
+          <div class="card-body text-center">
+            <h6 class="card-title mb-2">STR XOOX Website Project</h6>
+            <p class="small text-muted mb-3">PDF • 493 KB</p>
+            <a href="assets/files/projects.docs/STR_XOOX.Website.project.pdf"
+               target="_blank"
+               class="btn-view mb-3">
+              <i class="bi bi-eye-fill me-1"></i> VIEW
+            </a>
+            <a href="assets/files/projects.docs/STR_XOOX.Website.project.pdf"
+               download
+               class="btn-download mt-2">
+              <i class="bi bi-download me-1"></i> DOWNLOAD
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project Mobile .STR (DOCX only download) -->
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card h-100 shadow-sm border-primary">
+          <div class="card-body text-center">
+            <h6 class="card-title mb-2">Project Mobile .STR</h6>
+            <p class="small text-muted mb-3">PDF • 264 KB</p>
+             <!-- VIEW -->
+      <a
+        href="assets/files/projects.docs/Project Mobile.STR.pdf"
+        target="_blank"
+         class="btn-view mb-3">
+        <i class="bi bi-eye-fill me-1"></i> VIEW
+      </a>
+            <a href="assets/files/projects.docs/Project Mobile.STR.pdf"
+               download
+               class="btn-download mt-2">
+              <i class="bi bi-download me-1"></i> DOWNLOAD
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Gantt Chart (Excel) -->
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card h-100 shadow-sm border-primary">
+          <div class="card-body text-center">
+            <h6 class="card-title mb-2">Gantt chart for Website XOOX</h6>
+            <p class="small text-muted mb-3">XLSX • 49 KB</p>
+            <!-- VIEW דרך Google Docs Viewer -->
+      <a
+        href="https://docs.google.com/spreadsheets/d/1vi7F27FQSdWBWJoTK-ZOU8rxS5NTF_VL/edit?gid=941463458#gid=941463458
+"
+        target="_blank"
+         class="btn-view mb-3">
+        <i class="bi bi-eye-fill me-1"></i> VIEW
+      </a>
+            
+            <a href="assets/files/projects.docs/Gantt.chart.for.the.project.Website.XOOX.timeline..pdf"
+               download
+               class="btn-download mt-2">
+              <i class="bi bi-download me-1"></i> DOWNLOAD
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Test Cases – סקירה מקופלת -->
+      <div class="col-sm-12">
+        <!-- Mobile & Web Test Cases Folder -->
+<div class="card shadow-sm border-primary mb-4">
+  <div class="card-body">
+
+    <!-- כותרת הבלוק -->
+    <h6 class="card-title">Mobile Test Cases (8 screenshots)</h6>
+    <p class="small text-muted">PNG • various sizes</p>
+
+    <!-- כפתור פתיחת תיקייה -->
+    <button class="btn btn-outline-primary mb-3"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#tcFolder"
+            aria-expanded="false">
+      <i class="bi bi-folder-fill me-1"></i>Open the TC folder
+    </button>
+
+    <!-- ה‑collapse עצמו -->
+    <div class="row g-4 collapse" id="tcFolder">
+      
+
+      
+      <!-- Mobile TC Monday1 -->
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card h-100 shadow-sm">
+          <img src="assets/files/projects.docs/Mobile.project.TC.Monday1.png"
+               class="card-img-top" alt="Mobile TC Monday1">
+          <div class="card-body text-center">
+            <h6 class="card-title">Mobile TC Monday 1</h6>
+            <p class="small text-muted mb-3">PNG • 94 KB</p>
+            <a href="assets/files/projects.docs/Mobile.project.TC.Monday1.png"
+               target="_blank"
+               class="btn-view mb-2">
+              <i class="bi bi-eye-fill me-1"></i> VIEW
+            </a>
+            <a href="assets/files/projects.docs/Mobile.project.TC.Monday1.png"
+               download
+               class="btn-download">
+              <i class="bi bi-download me-1"></i> DOWNLOAD
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile TC Monday2 -->
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card h-100 shadow-sm">
+          <img src="assets/files/projects.docs/Mobile.project.TC.Monday2.png"
+               class="card-img-top" alt="Mobile TC Monday2">
+          <div class="card-body text-center">
+            <h6 class="card-title">Mobile TC Monday 2</h6>
+            <p class="small text-muted mb-3">PNG • 96 KB</p>
+            <a href="assets/files/projects.docs/Mobile.project.TC.Monday2.png"
+               target="_blank"
+               class="btn-view mb-2">
+              <i class="bi bi-eye-fill me-1"></i> VIEW
+            </a>
+            <a href="assets/files/projects.docs/Mobile.project.TC.Monday2.png"
+               download
+               class="btn-download">
+              <i class="bi bi-download me-1"></i> DOWNLOAD
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile TC Monday3 -->
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card h-100 shadow-sm">
+          <img src="assets/files/projects.docs/Mobile.project.TC.Monday3.png"
+               class="card-img-top" alt="Mobile TC Monday3">
+          <div class="card-body text-center">
+            <h6 class="card-title">Mobile TC Monday 3</h6>
+            <p class="small text-muted mb-3">PNG • 81 KB</p>
+            <a href="assets/files/projects.docs/Mobile.project.TC.Monday3.png"
+               target="_blank"
+               class="btn-view mb-2">
+              <i class="bi bi-eye-fill me-1"></i> VIEW
+            </a>
+            <a href="assets/files/projects.docs/Mobile.project.TC.Monday3.png"
+               download
+               class="btn-download">
+              <i class="bi bi-download me-1"></i> DOWNLOAD
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile TC Monday4 -->
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card h-100 shadow-sm">
+          <img src="assets/files/projects.docs/Mobile.project.TC.Monday4.png"
+               class="card-img-top" alt="Mobile TC Monday4">
+          <div class="card-body text-center">
+            <h6 class="card-title">Mobile TC Monday 4</h6>
+            <p class="small text-muted mb-3">PNG • 80 KB</p>
+            <a href="assets/files/projects.docs/Mobile.project.TC.Monday4.png"
+               target="_blank"
+               class="btn-view mb-2">
+              <i class="bi bi-eye-fill me-1"></i> VIEW
+            </a>
+            <a href="assets/files/projects.docs/Mobile.project.TC.Monday4.png"
+               download
+               class="btn-download">
+              <i class="bi bi-download me-1"></i> DOWNLOAD
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- XOOX Test Case 1 -->
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card h-100 shadow-sm">
+          <img src="assets/files/projects.docs/XOOX.Website.project.Test.Case1.png"
+               class="card-img-top" alt="XOOX Test Case 1">
+          <div class="card-body text-center">
+            <h6 class="card-title">XOOX Test Case 1</h6>
+            <p class="small text-muted mb-3">PNG • 228 KB</p>
+            <a href="assets/files/projects.docs/XOOX.Website.project.Test.Case1.png"
+               target="_blank"
+               class="btn-view mb-2">
+              <i class="bi bi-eye-fill me-1"></i> VIEW
+            </a>
+            <a href="assets/files/projects.docs/XOOX.Website.project.Test.Case1.png"
+               download
+               class="btn-download">
+              <i class="bi bi-download me-1"></i> DOWNLOAD
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- XOOX Test Case 2 -->
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card h-100 shadow-sm">
+          <img src="assets/files/projects.docs/XOOX.Website.project.Test.Case2.png"
+               class="card-img-top" alt="XOOX Test Case 2">
+          <div class="card-body text-center">
+            <h6 class="card-title">XOOX Test Case 2</h6>
+            <p class="small text-muted mb-3">PNG • 198 KB</p>
+            <a href="assets/files/projects.docs/XOOX.Website.project.Test.Case2.png"
+               target="_blank"
+               class="btn-view mb-2">
+              <i class="bi bi-eye-fill me-1"></i> VIEW
+            </a>
+            <a href="assets/files/projects.docs/XOOX.Website.project.Test.Case2.png"
+               download
+               class="btn-download">
+              <i class="bi bi-download me-1"></i> DOWNLOAD
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- XOOX Test Case 3 -->
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card h-100 shadow-sm">
+          <img src="assets/files/projects.docs/XOOX.Website.project.Test.Case3.png"
+               class="card-img-top" alt="XOOX Test Case 3">
+          <div class="card-body text-center">
+            <h6 class="card-title">XOOX Test Case 3</h6>
+            <p class="small text-muted mb-3">PNG • 163 KB</p>
+            <a href="assets/files/projects.docs/XOOX.Website.project.Test.Case3.png"
+               target="_blank"
+               class="btn-view mb-2">
+              <i class="bi bi-eye-fill me-1"></i> VIEW
+            </a>
+            <a href="assets/files/projects.docs/XOOX.Website.project.Test.Case3.png"
+               download
+               class="btn-download">
+              <i class="bi bi-download me-1"></i> DOWNLOAD
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- XOOX Test Case 4 -->
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card h-100 shadow-sm">
+          <img src="assets/files/projects.docs/XOOX.Website.project.Test.Case4.png"
+               class="card-img-top" alt="XOOX Test Case 4">
+          <div class="card-body text-center">
+            <h6 class="card-title">XOOX Test Case 4</h6>
+            <p class="small text-muted mb-3">PNG • 194 KB</p>
+            <a href="assets/files/projects.docs/XOOX.Website.project.Test.Case4.png"
+               target="_blank"
+               class="btn-view mb-2">
+              <i class="bi bi-eye-fill me-1"></i> VIEW
+            </a>
+            <a href="assets/files/projects.docs/XOOX.Website.project.Test.Case4.png"
+               download
+               class="btn-download">
+              <i class="bi bi-download me-1"></i> DOWNLOAD
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /row collapse -->
+
+  </div><!-- /card-body -->
+</div><!-- /card -->
+
+</section>
+
+
+<section class="portfolio section" id="presentations">
+<!-- Section Title -->
+<!-- Section Title (כבר קיים אצלך) -->
+<div class="container section-title" data-aos="fade-up">
+  <h2>Presentations</h2>
+  <p><strong>View All My QA Projects Here</strong></p>
+</div>
+
+<!-- === כרטיסי המצגות === -->
+<div class="container">
+  <div class="row g-4" data-aos="fade-up" data-aos-delay="200">
+    
+
+    
+    <!-- --- Warehouse ERP presentation --- -->
+    <div class="col-12 col-sm-6">
+      <div class="card h-100 shadow-sm border-primary">
+         <img src="assets/files/projects.docs/presentations/Cover.image.Project.Warehouse.ERP_upscaled.png"
+         class="card-img-top" alt="Warehouse ERP cover">
+        <div class="card-body text-center">
+          <h6 class="card-title mb-2">Warehouse ERP project</h6>
+          <p class="small text-muted mb-3">PDF &nbsp;• &nbsp;24 KB</p>
+
+         <a
+    href="assets/files/projects.docs/presentations/Warehouse.ERP.project.pdf"
+    target="_blank"
+    class="btn-view mb-2">
+    <i class="bi bi-eye-fill me-1"></i> View
+  </a>
+ <!-- כפתור DOWNLOAD -->
+      <a href="assets/files/projects.docs/presentations/Warehouse.ERP.project.pdf"
+   download
+    class="btn-download mt-2 d-inline-block">
+  <i class="bi bi-download me-1"></i> DOWNLOAD
+</a>
+    </div>
+  </div>
+</div>
+        
+
+    <!-- --- XOXOX.co.il presentation --- -->
+    <div class="col-12 col-sm-6">
+      <div class="card h-100 shadow-sm border-primary">
+        <img src="assets/files/projects.docs/presentations/Cover.image.Project.Web.site.xoox.co.il_upscaled.png"
+        class="card-img-top" alt="XOOX.co.il Website Project cover">
+        <div class="card-body text-center">
+          <h6 class="card-title mb-2">XOOX.co.il Website Project</h6>
+          <p class="small text-muted mb-3">PDF &nbsp;• &nbsp;216 KB</p>
+
+          <a
+    href="assets/files/projects.docs/presentations/www.xoox.co.il.pdf"
+    target="_blank"
+    class="btn-view mb-2">
+    <i class="bi bi-eye-fill me-1"></i> View
+  </a>
+        <!-- כפתור DOWNLOAD -->
+      <a href="assets/files/projects.docs/presentations/www.xoox.co.il.pdf"
+         download
+         class="btn-download mt-2 d-inline-block"
+  <i class="bi bi-download"></i> DOWNLOAD
+      </a>
+    </div>
+  </div>
+</div>
+
+  </div><!-- /.row -->
+</div><!-- /.container -->
+
+</section><!-- /Portfolio Section -->
+<!-- Pricing Section -->
+
+<!-- Faq Section -->
+
+<!-- Testimonials Section -->
+
+<!-- Contact Section -->
+<section class="contact section" id="contact">
+<!-- Section Title -->
+<div class="container section-title" data-aos="fade-up">
+<h2>Contact</h2>
+ <p><strong>Have a question? Feel free to drop me a line or connect on LinkedIn</strong></p>
+</div><!-- End Section Title -->
+<div class="container" data-aos="fade-up" data-aos-delay="100">
+<div class="info-wrap pb-2 mb-2" data-aos="fade-up" data-aos-delay="200">
+
+<div class="row gy-4">
+<div class="col-12 col-sm-6 col-md-4 col-lg-2">
+    
+<div class="info-item d-flex align-items-center position-relative">
+  <i class="bi bi-geo-alt flex-shrink-0"></i>
+  <div>
+    <h3>
+      <a href="https://maps.google.com/?q=Haifa,Israel"
+         target="_blank"
+         class="stretched-link text-reset">
+        Address
+      </a>
+    </h3>
+    <p>Haifa,Israel</p>
+  </div>
+</div>
+
+</div><!-- End Info Item -->
+<div class="col-12 col-sm-6 col-md-4 col-lg-2">
+  
+<div class="info-item d-flex align-items-center position-relative">
+  <i class="bi bi-telephone flex-shrink-0"></i>
+  <div>
+    <h3>
+      <a href="tel:+972542073329" class="stretched-link text-reset">
+        Call Us
+      </a>
+    </h3>
+    <p>054-207-33-29<br>972-542073329</p>
+  </div>
+</div>
+
+</div><!-- End Info Item -->
+<div class="col-12 col-sm-6 col-md-4 col-lg-2">
+  
+<div class="info-item d-flex align-items-center position-relative">
+  <i class="bi bi-envelope flex-shrink-0"></i>
+  <div>
+    <h3>
+      <a href="mailto:nikitagoiko2@gmail.com"
+         class="stretched-link text-reset">
+        Email Us
+      </a>
+    </h3>
+    <p>nikitagoiko2@gmail.com</p>
+  </div>
+</div>
+
+</div><!-- End Info Item -->
+<div class="col-12 col-sm-6 col-md-4 col-lg-2">
+      <div class="info-item d-flex align-items-center position-relative">
+      <i class="bi bi-linkedin flex-shrink-0"></i>
+      <div>
+        <h3>
+          <a href="https://www.linkedin.com/in/nikita-goiko/" target="_blank" class="stretched-link text-reset">LinkedIn</a>
+        </h3>
+        <p>nikita‑goiko</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Instagram -->
+  <div class="col-12 col-sm-6 col-md-4 col-lg-2">
+  
+    <div class="info-item d-flex align-items-center position-relative">
+      <i class="bi bi-instagram flex-shrink-0"></i>
+      <div>
+        <h3>
+          <a href="https://www.instagram.com/nikita_goiko/" target="_blank" class="stretched-link text-reset">Instagram</a>
+        </h3>
+        <p>@nikita_goiko</p>
+      </div>
+    </div>
+  </div>
+  <!-- Facebook -->
+    <div class="col-12 col-sm-6 col-md-4 col-lg-2">
+      <div class="info-item d-flex align-items-center position-relative">
+        <i class="bi bi-facebook flex-shrink-0"></i>
+        <div>
+          <h3><a href="https://www.facebook.com/nikita.goiko" target="_blank" class="stretched-link text-reset">Facebook</a></h3>
+          <p>nikita.goiko</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+</div>
+</div><!-- … Address | Call | Email blocks … -->
+</div><!--  כאן נסגר ה-row של שלושת הבלוקים -->
+</div><!--  כאן נסגר ה-info-wrap  -->
+
+
+
+
+<!-- הטופס מתחיל מיד אחר-כך -->
+<form action="forms/contact.php" class="php-email-form" …>
+
+<form action="forms/contact.php" class="php-email-form" data-aos="fade-up" data-aos-delay="300" method="post">
+<div class="row gy-3">
+<div class="col-12 col-md-6">
+<input class="form-control" name="name" placeholder="Your Name" required="" type="text"/>
+</div>
+<div class="col-12 col-md-6">
+<input class="form-control" name="email" placeholder="Your Email" required="" type="email"/>
+</div>
+<div class="col-md-12">
+<input class="form-control" name="subject" placeholder="Subject" required="" type="text"/>
+</div>
+<div class="col-md-12">
+<textarea class="form-control" name="message" placeholder="Message" required="" rows="6"></textarea>
+</div>
+<div class="col-md-12 text-center">
+<div class="loading">Loading</div>
+<div class="error-message"></div>
+<div class="sent-message">Your message has been sent. Thank you!</div>
+<button type="submit">Send Message</button>
+</div>
+</div>
+</form><!-- End Contact Form -->
+</div>
+</section><!-- /Contact Section -->
+</div><!-- /page-bg -->
+</main>
+</main>
+<footer class="footer accent-background" id="footer">
+<div class="container">
+<div class="copyright text-center">
+
+</div>
+
+</div>
+<div class="credits">
+<!-- All the links in the footer should remain intact. -->
+<!-- You can delete the links only if you've purchased the pro version. -->
+<!-- Licensing information: https://bootstrapmade.com/license/ -->
+<!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+        
+</div>
+</div>
+</footer>
+<!-- Scroll Top -->
+<a class="scroll-top d-flex align-items-center justify-content-center" href="#" id="scroll-top"><i class="bi bi-arrow-up-short"></i></a>
+<!-- Preloader -->
+<div id="preloader"></div>
+<!-- Vendor JS Files -->
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/vendor/php-email-form/validate.js"></script>
+<script src="assets/vendor/aos/aos.js"></script>
+<script src="assets/vendor/typed.js/typed.umd.js"></script>
+<script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+<script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+<script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+<script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+<!-- Main JS File -->
+<script src="assets/js/main.js"></script>
+</body>
+</html>
